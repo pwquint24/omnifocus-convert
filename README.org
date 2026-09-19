@@ -1,0 +1,31 @@
+#+title: Readme
+
+* Package to convert OmniFocus tasks to an org mode file.
+
+** Description
+
+This a vibe coded Emacs lisp package to convert the XML files exported by OmniFocus into org mode tasks. The projects are converted into org mode headings, and the tasks sit below these. Tags are converted, as are defer dates (to SCHEDULED tags) and due dates. Be default all tasks are exported including those that are done. Tested with OmniFocus 4.9.
+
+** Not yet implemented
+
+Recurring tasks are not yet implemented, neither are attachments
+
+** Export from OmniFocus
+
+To get the XML file that this converter will read, from OmniFocus with the Forecast view open select File>Export and choose OmniFocus Document as the export type. Save it somewhere
+
+That is a macOS package/bundle. Right clicking and selecting Show Contents will get you the contents. The contents.xml is what you want - that contains all the task data. The data directory contains zip files of any attachements from your database.
+
+** Installation
+
+The package is not in any package repositories. You will need to down load it to a directory in your load-path and then require it.
+
+** Usage
+
+- `(omnifocus-convert-file FILE)`  converts a file on disk returning an Org string
+- `(omnifocus-convert-buffer &optional BUFFER)`  converts the contents of a buffer (containing contents.xml) creating a **new buffer** in `org-mode`
+- `(omnifocus-convert-region START END &optional BUFFER)`   as above but converts XML in a selected region
+- `(omnifocus-convert-root DOM)`  takes an already-parsed DOM and outputs an Org string
+
+
+#  LocalWords:  OmniFocus
