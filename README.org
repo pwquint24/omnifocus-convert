@@ -6,6 +6,8 @@
 
 This a vibe coded Emacs lisp package to convert the XML files exported by OmniFocus into org mode tasks. The projects are converted into org mode headings, and the tasks sit below these. Tags are converted, as are defer dates (to SCHEDULED tags) and due dates. Be default all tasks are exported including those that are done. Tested with OmniFocus 4.9.
 
+Coding by DeepSeek
+
 ** Not yet implemented
 
 Recurring tasks are not yet implemented, neither are attachments
@@ -14,7 +16,7 @@ Recurring tasks are not yet implemented, neither are attachments
 
 To get the XML file that this converter will read, from OmniFocus with the Forecast view open select File>Export and choose OmniFocus Document as the export type. Save it somewhere
 
-That is a macOS package/bundle. Right clicking and selecting Show Contents will get you the contents. The contents.xml is what you want - that contains all the task data. The data directory contains zip files of any attachements from your database.
+That is a macOS package/bundle. Right clicking and selecting Show Contents will get you the contents. The contents.xml is what you want - that contains all the task data. The data directory contains zip files of any attachments from your database.
 
 ** Installation
 
